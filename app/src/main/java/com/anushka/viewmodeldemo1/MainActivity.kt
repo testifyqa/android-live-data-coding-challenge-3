@@ -12,8 +12,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+
+        binding.myViewModel = viewModel
+
         viewModel.countData.observe(this, {
             binding.countText.text = it.toString()
         })
