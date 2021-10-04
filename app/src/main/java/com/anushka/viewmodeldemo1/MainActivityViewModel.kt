@@ -14,8 +14,7 @@ class MainActivityViewModel : ViewModel() {
         count.value = 0
     }
 
-    fun getUpdatedCount(): Int? {
+    fun updateCount() {
         count.value = (count.value)?.plus(1)
-        return count.value
     }
 }

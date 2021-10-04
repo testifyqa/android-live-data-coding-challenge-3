@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.button.setOnClickListener {
-            binding.countText.text = viewModel.getUpdatedCount().toString()
+            binding.countText.text = viewModel.updateCount().toString()
         }
     }
 }
